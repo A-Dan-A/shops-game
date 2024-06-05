@@ -1,114 +1,307 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Project 2 - 'I Went to the Shops and I Bought' Game</h1>
 
-Welcome Daniel Abraham,
+[View the live project here.](https://a-dan-a.github.io/shops-game/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This is an online memory game in which you have to remember an ever-growing list of items, trying to score as high as you can. It is designed predominently for children, to help their working memory.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 28, 2024**
+<h2 align="center"><img src="assets/readme-images/devices.png"></h2>
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
+-   ### User stories
 
-A blue button should appear to click: _Make Public_,
+    -   #### First Time Visitor Goals
 
-Another blue button should appear to click: _Open Browser_.
+        1. As a First Time Visitor, I want the purpose of the site to be obvious 
+        2. As a First Time Visitor, I want the navigation to be obvious and easy.
+        3. As a First Time Visitor, 
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+    -   #### Returning Visitor Goals
 
-A blue button should appear to click: _Make Public_,
+        1. As a Returning Visitor, 
+        2. As a Returning Visitor, 
+        3. As a Returning Visitor, 
 
-Another blue button should appear to click: _Open Browser_.
+    -   #### Frequent User Goals
+        1. As a Frequent User, 
+        2. As a Frequent User, 
+        3. As a Frequent User, 
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+-   ### Design
+    -   #### Colour Scheme
 
-To log into the Heroku toolbelt CLI:
+The main colors used are: 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+| Color | Hex Code |
+| :---: | :---: |
+| white | #ffffff |
+| grey | #a7a7a7 |
+|dark red  | #be3144  | 
+        
+with Black - #000000 text.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+-   #### Typography
+    -   The Arial font is used throughout the site, with Helvetica and sans-serif as back-ups in case there is an error. Arial is a highly accessible and clean font that makes the site easy to read.
+ -  #### Imagery
+    -   
 
-------
+*   ### Wireframes
 
-## Release History
+    -   #### Desktop wireframes
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+        <img src="assets/readme-images/" width="300">
 
-**May 28 2024:** Fix Mongo and Links installs
+        <img src="assets/readme-images/" width="300">
+        
+        <img src="assets/readme-images/" width="300">
 
-**April 26 2024:** Update node version to 16
+ 
 
-**September 20 2023:** Update Python version to 3.9.17.
+    -   #### Mobile Wireframe 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+        <img src="assets/readme-images/" width="300">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+        <img src="assets/readme-images/" width="300">
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+        <img src="assets/readme-images/" width="300">
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    -   #### Tablet Wireframe
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+        <img src="assets/readme-images/" width="300">
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+        <img src="assets/readme-images/" width="300">
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+        <img src="assets/readme-images/" width="300">
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+-   Is responsive on all screen sizes.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<img src="assets/readme-images/" width="500">
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+-   
+-   
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<img src="assets/readme-images/" width="500">
 
-------
+-   
+-   
 
-## FAQ about the uptime script
+<img src="assets/readme-images/" width="500">
 
-**Why have you added this script?**
+-   
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<img src="assets/readme-images/" width="500">
 
-**How will this affect me?**
+-   
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<img src="assets/readme-images/" width="500">
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+-   
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<img src="assets/readme-images/" width="500">
 
-**So….?**
+-   
+-   
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<img src="assets/readme-images/" width="500">
 
-**Can I opt out?**
+## Technologies Used
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Languages Used
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-**Anything more?**
+### Frameworks, Libraries & Programs Used
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+1. [Bootstrap 4.2.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Bootstrap was used to assist with the responsiveness and styling of the website.
+1. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used for the social media icons in the footer of every page.
+1. [jQuery:](https://jquery.com/)
+    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+1. [GitPod](https://gitpod.io/)
+    - GitPod was used as the code editor for this project, to control version control and pushing to the repository.
+1. [GitHub:](https://github.com/)
+    - GitHub has been used to store the project.
+1. [Paint:](https://www.microsoft.com/en-us/windows/paint)
+    - Paint was used to create the [wireframes]() that were used in the design process.
 
----
+## Testing
 
-Happy coding!
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+
+_____
+
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+
+
+### Testing User Stories from User Experience (UX) Section
+
+-   #### First Time Visitor Goals
+
+    1. As a First Time Visitor, 
+
+        1. 
+        2. 
+        3. 
+    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/" width="500">
+
+    2. As a First Time Visitor, I want the navigation to be obvious and easy.
+
+        1. 
+        2. 
+        3. 
+    <img src="assets/readme-images/" width="500">
+
+    3. 
+        1. 
+        2. 
+        3. 
+    <img src="assets/readme-images/" width="500">
+
+-   #### Returning Visitor Goals
+
+    1. As a Returning Visitor, 
+
+        1. 
+        2. 
+    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/" width="500">
+
+    2. As a Returning Visitor, 
+
+        1. 
+        2. 
+        3. 
+    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/" width="500">
+
+    3. As a Returning Visitor, 
+        1. 
+        2. 
+    <img src="assets/readme-images/" width="500">
+
+-   #### Frequent User Goals
+
+    1. As a Frequent User, 
+
+        1. 
+        2. 
+        3. 
+    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/" width="500">
+
+    2. As a Frequent User, 
+
+        1. 
+        2. 
+    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/" width="500">
+
+    3. As a Frequent User, 
+        1. 
+        2. 
+    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/" width="500">
+
+
+### Further Testing
+
+-   The website was tested on Google Chrome and Microsoft Edge browsers.
+-   The website was viewed on a laptop and a smartphone as well as by using chrome developer tools to test different screen sizes.
+-   Testing was done to make sure all of the pages linked to each other and to any external links properly.
+
+-   Testing was done with Google's Lighthouse devtool. 
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+
+-   Testing was done with the Webaim WAVE tool to test accessibility
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/" width="500">
+
+### Known Bugs
+
+-   
+
+-   
+
+-   
+
+-   
+-  
+
+-   
+
+## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub pages using the following steps:
+
+1. Log into [GitHub](https://github.com/)
+2. Navigate to this [repository](https://github.com/A-Dan-A/book-club/).
+3. Go to settings and select pages.
+4. Select 'deploy from a branch' and 'main' as the root.
+5. There should now be a link to the published website once it is ready.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository a copy of the original repository is made, so we can make changes without the original being changed.
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository,above the "Settings" Button on the menu, locate the "Fork" Button.
+3. A copy of the original repository should now be in your account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. Click "Clone or download", which are underneath the repository name.
+3. Copy the link under "Clone with HTTPS" and this will clone the repositor using HTTPS.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, then paste the URL that you copied in Step 3.
+7. Press Enter, and your local clone will be created.
+
+## Credits
+
+### Code
+
+-   
+
+-   
+
+-   
+
+### Content
+
+-   All the content was written by the developer.
+
+-   The template used for the README was from a Code Institute [sample README](https://github.com/Code-Institute-Solutions/SampleREADME) that was rewritten for this specific project, but with some content retained or modified where it was used, such as credits for Bootstrap.
+
+### Media
+
+-   
+
+-   
+
+### Acknowledgements
+
+-   My Mentor for their patience and help in problem solving and guiding me in what worked and what needed to be added or changed.
+
+-   Tutor support at Code Institute for their support and helpful advice.
