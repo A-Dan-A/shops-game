@@ -21,5 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-button');
     const resetButton = document.getElementById('reset-button')
 
+    items.forEach(item => {
+        const img = document.createElement('img');
+        img.src = `images/${item}.png`;
+        img.alt = item;
+        img.id = item;
+        img.addEventListener('click', () => handleItemClick(item));
+        itemGrid.appendChild(img);
+    })
 
 })
