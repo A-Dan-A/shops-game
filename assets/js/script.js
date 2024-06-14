@@ -1,4 +1,4 @@
-const fruits = [
+const items = [
     'apple',
     'banana',
     'strawberry',
@@ -8,7 +8,7 @@ const fruits = [
     'coconut',
     'grapes',
     'lemon'
-]
+];
 
 let gameSequence = [];
 let usersequence = [];
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = `images/${item}.png`;
         img.alt = item;
         img.id = item;
-        img.addEventListener('click', () => handleItemClick(item));
+        //img.addEventListener('click', () => handleItemClick(item));
         itemGrid.appendChild(img);
-    })
+    });
 
 })
