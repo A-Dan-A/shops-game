@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     items.forEach(item => {
         const img = document.createElement('img');
-        img.src = `images/${item}.png`;
+        img.src = `assets/images/${item}.png`;
         img.alt = item;
         img.id = item;
         //img.addEventListener('click', () => handleItemClick(item));
