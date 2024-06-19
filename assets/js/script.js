@@ -30,4 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         itemGrid.appendChild(img);
     });
 
+    startButton.addEventListener('click', startGame);
+
+    resetButton.addEventListener('click', resetGame);
+
+    
+
 })
