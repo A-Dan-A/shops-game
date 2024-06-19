@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentItemBox = document.getElementById('current-item');
     const sequenceCounter = document.getElementById('sequence-counter');
     const startButton = document.getElementById('start-button');
-    const resetButton = document.getElementById('reset-button')
+    const resetButton = document.getElementById('reset-button');
 
     items.forEach(item => {
         const img = document.createElement('img');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function addRandomItemToSequence() {
-        const randomItem = items[Math.floor(Math.random() * items,length)];
+        const randomItem = items[Math.floor(Math.random() * items.length)];
         gameSequence.push(randomItem);
         displayItem(randomItem);
         updateCounter();
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayItem(item) {
-        currentItemBox.innerHTML = `img src="images/${fruit}.png" alt="${fruit}">`
+        currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`
     }
 
 })
