@@ -55,11 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function addRandomItemToSequence() {
-        const randomItem = items[Math.floor(Math.random() * items={.length})];
+        const randomItem = items[Math.floor(Math.random() * items,length)];
         gameSequence.push(randomItem);
         displayItem(randomItem);
         updateCounter();
         userSequence = [];
+    }
+
+    function displayItem(item) {
+        currentItemBox.innerHTML = `img src="images/${fruit}.png" alt="${fruit}">`
     }
 
 })
