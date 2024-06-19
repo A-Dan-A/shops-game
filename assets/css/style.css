@@ -35,3 +35,9 @@ body {
     background-color: #f0f0f0;
     padding: 10px;
 }
+
+#current-item {
+    display: flex;
+    border-style: inherit;
+    padding: 10px;
+}
