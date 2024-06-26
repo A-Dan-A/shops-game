@@ -75,14 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!checkUserSequence()) {
             alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
             resetGame();
-        } else if (userSequence.length === gameSequence.length){
+        } else if (userSequence.length === gameSequence.length) {
             setTimeout(addRandomItemToSequence, 1000);
         }
     }
 
     function checkUserSequence() {
-        for (let i = 0; i < userSequence.length; i++){
-            if (userSequence[i] !== gameSequence) {
+        for (let i = 0; i < userSequence.length; i++) {
+            if (userSequence[i] !== gameSequence[i]) {
                 return false;
             }
         }
