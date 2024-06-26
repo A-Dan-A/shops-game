@@ -41,3 +41,7 @@ body {
     border-style: inherit;
     padding: 10px;
 }
+
+#sequence-counter {
+    background-color: brown;
+}
