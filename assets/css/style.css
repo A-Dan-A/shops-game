@@ -40,6 +40,8 @@ body {
     display: flex;
     border-style: inherit;
     padding: 10px;
+    width: 100px;
+    height: 100px;
 }
 
 #sequence-counter {

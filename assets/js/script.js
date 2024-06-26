@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayItem(item) {
-        currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`
+        currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`;
     }
 
     function updateCounter() {
