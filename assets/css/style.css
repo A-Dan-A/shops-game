@@ -36,9 +36,9 @@ body {
     padding: 10px;
 }
 
-#current-item {
+#current-item img {
     display: flex;
-    border-style: inherit;
+    border-style: solid;
     padding: 10px;
     width: 100px;
     height: 100px;
