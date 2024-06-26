@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = `assets/images/${item}.png`;
         img.alt = item;
         img.id = item;
-        //img.addEventListener('click', () => handleItemClick(item));
+        img.addEventListener('click', () => handleItemClick(item));
         itemGrid.appendChild(img);
     });
 
@@ -73,9 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleItemClick(item) {
         userSequence.push(item);
         if (!checkUserSequence()) {
-            alert(`Game Over! Your list contains ${gameSequence.length - 1} items`);
+            alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
             resetGame();
-        } else if (userSequence.length === gameSequence.length);
+        } else if (userSequence.length === gameSequence.length){
+            setTimeout(addRandomItemToSequence, 1000);
+        }
     }
 
     function checkUserSequence() {
