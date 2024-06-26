@@ -11,7 +11,7 @@ const items = [
 ];
 
 let gameSequence = [];
-let usersequence = [];
+let userSequence = [];
 let score = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
