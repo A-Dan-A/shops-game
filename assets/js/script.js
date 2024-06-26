@@ -66,4 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`
     }
 
+    function updateCounter() {
+        sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
+    }
+
 })
