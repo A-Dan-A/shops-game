@@ -70,4 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
         sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
     }
 
+    function handleItemClick(item) {
+        userSequence.push(item);
+        if (!checkUserSequence()) {
+            alert(`Game Over! Your list contains ${gameSequence.length - 1} items`);
+            resetGame();
+        } else if (userSequence.length === gameSequence.length);
+    }
+
+    function checkUserSequence() {
+        for (let i = 0; i < userSequence.length; i++){
+            if (userSequence[i] !== gameSequence) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 })
