@@ -78,8 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
         userSequence.push(item);
         if (!checkUserSequence()) {
             alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
+            updateHighScore();
             resetGame();
         } else if (userSequence.length === gameSequence.length) {
+            score++;
             setTimeout(addRandomItemToSequence, 1000);
         }
     }
