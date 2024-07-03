@@ -13,6 +13,7 @@ const items = [
 let gameSequence = [];
 let userSequence = [];
 let score = 0;
+let highScore = localStorage.getItem('highScore') || 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     const itemGrid = document.getElementById('item-grid');
@@ -20,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sequenceCounter = document.getElementById('sequence-counter');
     const startButton = document.getElementById('start-button');
     const resetButton = document.getElementById('reset-button');
+    const highScoreDisplay = document.getElementById('high-score');
+
+    highScoreDisplay.textContent = `High Score: ${highScore}`;
 
     items.forEach(item => {
         const img = document.createElement('img');
@@ -87,6 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         return true;
+    }
+
+    function updateHighScore() {
+        if (score > highScore) {
+            highScore = score;
+            localStorage.setItem('highScore', highScore);
+            highScoreDisplay.textContent = `High Score: ${highScore}`;
+        }
     }
 
 })
