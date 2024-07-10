@@ -237,16 +237,61 @@ _____
 
 ### Known Bugs
 
--   
+-   `img src="images/${item}.png" alt="${item}">` solved by adding < to start of tag
+
+-       function addRandomItemToSequence() {
+        const randomItem = items[Math.floor(Math.random() * items,length)];
+        gameSequence.push(randomItem);
+        displayItem(randomItem);
+        updateCounter();
+        userSequence = [];
+
+solved by changing a , to a .
+
+-   function updateCounter() {
+        sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
+    }
+
+was function updateCounter( {
+        sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
+    })
+
+-   let usersequence = [];
+
+should have been let userSequence = [];
+
+-      function checkUserSequence() {
+        for (let i = 0; i < userSequence.length; i++) {
+            if (userSequence[i] !== gameSequence) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+changed to     function checkUserSequence() {
+        for (let i = 0; i < userSequence.length; i++) {
+            if (userSequence[i] !== gameSequence[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 -   
+fix high score (added high score section)
 
--   
+    function handleItemClick(item) {
+        userSequence.push(item);
+        if (!checkUserSequence()) {
+            alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
+            updateHighScore();
+            resetGame();
+        } else if (userSequence.length === gameSequence.length) {score++;
+            setTimeout(addRandomItemToSequence, 1000);
+        }
 
--   
--  
-
--   
+-   testing - to get images of fruit to load, had to add assets/ before the images/fruit.png code
 
 ## Deployment
 
@@ -296,7 +341,26 @@ By forking the GitHub Repository a copy of the original repository is made, so w
 
 ### Media
 
--   
+-   Fruit images were all from WikiMedia Commons
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Orange%2C_orange_peel.jpg/640px-Orange%2C_orange_peel.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lemon03.jpg/640px-Lemon03.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pineapple_on_white_table.jpg/640px-Pineapple_on_white_table.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/D%27anjou_pear.jpg/640px-D%27anjou_pear.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Coconuts_-_single_and_cracked_open.jpg/640px-Coconuts_-_single_and_cracked_open.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Strawberry-331280433961ZpzL.png/640px-Strawberry-331280433961ZpzL.png
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Banana.png/640px-Banana.png
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Red_Apple_edit.png/640px-Red_Apple_edit.png
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Grapes_bunch_green.png/640px-Grapes_bunch_green.png
+
 
 -   
 
