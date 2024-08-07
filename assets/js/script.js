@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     startButton.addEventListener('click', startGame);
-
     resetButton.addEventListener('click', resetGame);
-
-})
+});
 
 function startGame() {
+    const startButton = document.getElementById('start-button');
+    const resetButton = document.getElementById('reset-button');
+    const sequenceCounter = document.getElementById('sequence-counter');
     startButton.style.display = 'none';
     resetButton.style.display = 'block';
     gameSequence = [];
@@ -51,6 +52,11 @@ function startGame() {
 }
 
 function resetGame() {
+    const startButton = document.getElementById('start-button');
+    const resetButton = document.getElementById('reset-button');
+    const currentItemBox = document.getElementById('current-item');
+    const sequenceCounter = document.getElementById('sequence-counter');
+
     gameSequence = [];
     userSequence = [];
     score = 0;
@@ -69,10 +75,12 @@ function addRandomItemToSequence() {
 }
 
 function displayItem(item) {
+    const currentItemBox = document.getElementById('current-item');
     currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`;
 }
 
 function updateCounter() {
+    const sequenceCounter = document.getElementById('sequence-counter');
     sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
 }
 
@@ -98,6 +106,8 @@ function checkUserSequence() {
 }
 
 function updateHighScore() {
+    const highScoreDisplay = document.getElementById('high-score');
+
     if (score > highScore) {
         highScore = score;
         localStorage.setItem('highScore', highScore);
