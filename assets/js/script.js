@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-button');
     const resetButton = document.getElementById('reset-button');
     const highScoreDisplay = document.getElementById('high-score');
+    const modal = document.getElementById('instruction-modal');
+    const closeButton = document.querySelector('.close-button');
 
     highScoreDisplay.textContent = `High Score: ${highScore}`;
 
@@ -36,6 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startButton.addEventListener('click', startGame);
     resetButton.addEventListener('click', resetGame);
+
+    modal.style.display = 'block';
+
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 
     updateFooterYear();
 });
