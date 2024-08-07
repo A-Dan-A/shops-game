@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startButton.addEventListener('click', startGame);
     resetButton.addEventListener('click', resetGame);
+
+    updateFooterYear();
 });
 
 function startGame() {
@@ -113,4 +115,10 @@ function updateHighScore() {
         localStorage.setItem('highScore', highScore);
         highScoreDisplay.textContent = `High Score: ${highScore}`;
     }
+}
+
+function updateFooterYear() {
+    const yearSpan = document.getElementById('current-year');
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
 }

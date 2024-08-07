@@ -52,3 +52,10 @@ body {
 #high-score {
     background-color:blue;
 }
+
+footer {
+    margin-top: 20px;
+    text-align:right;
+    font-size:15px;
+    color:#333;
+}
