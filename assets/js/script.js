@@ -38,71 +38,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resetButton.addEventListener('click', resetGame);
 
-    function startGame() {
-        startButton.style.display = 'none';
-        resetButton.style.display = 'block';
-        gameSequence = [];
-        userSequence = [];
-        score = 0;
-        sequenceCounter.textContent = 'Sequence Length: 0';
-        addRandomItemToSequence();
-    }
-
-    function resetGame() {
-        gameSequence = [];
-        userSequence = [];
-        score = 0;
-        sequenceCounter.textContent = 'Sequence Length: 0';
-        currentItemBox.innerHTML = '';
-        startButton.style.display = 'block';
-        resetButton.style.display = 'none';
-    }
-
-    function addRandomItemToSequence() {
-        const randomItem = items[Math.floor(Math.random() * items.length)];
-        gameSequence.push(randomItem);
-        displayItem(randomItem);
-        updateCounter();
-        userSequence = [];
-    }
-
-    function displayItem(item) {
-        currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`;
-    }
-
-    function updateCounter() {
-        sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
-    }
-
-    function handleItemClick(item) {
-        userSequence.push(item);
-        if (!checkUserSequence()) {
-            alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
-            updateHighScore();
-            resetGame();
-        } else if (userSequence.length === gameSequence.length) {
-            score++;
-            setTimeout(addRandomItemToSequence, 1000);
-        }
-    }
-
-    function checkUserSequence() {
-        for (let i = 0; i < userSequence.length; i++) {
-            if (userSequence[i] !== gameSequence[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    function updateHighScore() {
-        if (score > highScore) {
-            highScore = score;
-            localStorage.setItem('highScore', highScore);
-            highScoreDisplay.textContent = `High Score: ${highScore}`;
-        }
-    }
-
-    
-
 })
+
+function startGame() {
+    startButton.style.display = 'none';
+    resetButton.style.display = 'block';
+    gameSequence = [];
+    userSequence = [];
+    score = 0;
+    sequenceCounter.textContent = 'Sequence Length: 0';
+    addRandomItemToSequence();
+}
+
+function resetGame() {
+    gameSequence = [];
+    userSequence = [];
+    score = 0;
+    sequenceCounter.textContent = 'Sequence Length: 0';
+    currentItemBox.innerHTML = '';
+    startButton.style.display = 'block';
+    resetButton.style.display = 'none';
+}
+
+function addRandomItemToSequence() {
+    const randomItem = items[Math.floor(Math.random() * items.length)];
+    gameSequence.push(randomItem);
+    displayItem(randomItem);
+    updateCounter();
+    userSequence = [];
+}
+
+function displayItem(item) {
+    currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`;
+}
+
+function updateCounter() {
+    sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
+}
+
+function handleItemClick(item) {
+    userSequence.push(item);
+    if (!checkUserSequence()) {
+        alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
+        updateHighScore();
+        resetGame();
+    } else if (userSequence.length === gameSequence.length) {
+        score++;
+        setTimeout(addRandomItemToSequence, 1000);
+    }
+}
+
+function checkUserSequence() {
+    for (let i = 0; i < userSequence.length; i++) {
+        if (userSequence[i] !== gameSequence[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function updateHighScore() {
+    if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('highScore', highScore);
+        highScoreDisplay.textContent = `High Score: ${highScore}`;
+    }
+}
