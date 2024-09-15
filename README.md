@@ -15,18 +15,18 @@ This is an online memory game in which you have to remember an ever-growing list
 
         1. As a First Time Visitor, I want the purpose of the site to be obvious 
         2. As a First Time Visitor, I want the navigation to be obvious and easy.
-        3. As a First Time Visitor, 
+        3. As a First Time Visitor, I want to know how to play the game.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, 
-        2. As a Returning Visitor, 
-        3. As a Returning Visitor, 
+        1. As a Returning Visitor, to be reminded of the rules.
+        2. As a Returning Visitor, I want the game to be different every time.
+        3. As a Returning Visitor, I want an incentive to play again.
 
     -   #### Frequent User Goals
-        1. As a Frequent User, 
-        2. As a Frequent User, 
-        3. As a Frequent User, 
+        1. As a Frequent User, I want the game to remember my best score.
+        2. As a Frequent User, I want the game to be balanced enough for me to keep improving.
+        3. As a Frequent User, I want to see a measurable increase in my performance.
 
 -   ### Design
     -   #### Colour Scheme
