@@ -170,6 +170,7 @@ footer {
 
 }
 
+/* Medium devices */
 @media (min-width: 600px) and (max-width: 900px) {
     #game-container {
         flex-wrap: wrap;
@@ -199,7 +200,7 @@ footer {
     }
 }
 
-*/ Large devices */
+/* Large devices */
 @media (min-width: 900px) {
     #game-container {
         flex-direction: row;
