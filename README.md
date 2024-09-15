@@ -115,13 +115,12 @@ with Black - #000000 text.
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://www.javascript.com/)
 
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.2.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used for the social media icons in the footer of every page.
 1. [jQuery:](https://jquery.com/)
     - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
 1. [GitPod](https://gitpod.io/)
