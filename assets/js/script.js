@@ -1,53 +1,54 @@
+/*jshint esversion: 6 */
+/*jslint es6 */
+
 const items = [
-    'apple',
-    'banana',
-    'strawberry',
-    'pear',
-    'orange',
-    'pineapple',
-    'coconut',
-    'grapes',
-    'lemon'
+    "apple",
+    "banana",
+    "strawberry",
+    "pear",
+    "orange",
+    "pineapple",
+    "coconut",
+    "grapes",
+    "lemon"
 ];
 
 let gameSequence = [];
 let userSequence = [];
 let score = 0;
-let highScore = localStorage.getItem('highScore') || 0;
+let highScore = localStorage.getItem("highScore") || 0;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const itemGrid = document.getElementById('item-grid');
-    const currentItemBox = document.getElementById('current-item');
-    const sequenceCounter = document.getElementById('sequence-counter');
-    const startButton = document.getElementById('start-button');
-    const resetButton = document.getElementById('reset-button');
-    const highScoreDisplay = document.getElementById('high-score');
-    const modal = document.getElementById('instruction-modal');
-    const closeButton = document.querySelector('.close-button');
+document.addEventListener("DOMContentLoaded", function () {
+    const itemGrid = document.getElementById("item-grid");
+    const startButton = document.getElementById("start-button");
+    const resetButton = document.getElementById("reset-button");
+    const highScoreDisplay = document.getElementById("high-score");
+    const modal = document.getElementById("instruction-modal");
+    const closeButton = document.querySelector(".close-button");
 
     highScoreDisplay.textContent = `High Score: ${highScore}`;
 
-    items.forEach(item => {
-        const img = document.createElement('img');
+    items.forEach( function (item) {
+        const img = document.createElement("img");
         img.src = `assets/images/${item}.png`;
         img.alt = item;
         img.id = item;
-        img.addEventListener('click', () => handleItemClick(item));
+        img.addEventListener("click", () => handleItemClick(item));
         itemGrid.appendChild(img);
     });
 
-    startButton.addEventListener('click', startGame);
-    resetButton.addEventListener('click', resetGame);
+    startButton.addEventListener("click", startGame);
+    resetButton.addEventListener("click", resetGame);
 
-    modal.style.display = 'block';
+    modal.style.display = "block";
 
-    closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
+    closeButton.addEventListener("click", function () {
+        modal.style.display = "none";
     });
 
-    window.addEventListener('click', (event) => {
+    window.addEventListener("click", function (event) {
         if (event.target === modal) {
-            modal.style.display = 'none';
+            modal.style.display = "none";
         }
     });
 
@@ -55,31 +56,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function startGame() {
-    const startButton = document.getElementById('start-button');
-    const resetButton = document.getElementById('reset-button');
-    const sequenceCounter = document.getElementById('sequence-counter');
-    startButton.style.display = 'none';
-    resetButton.style.display = 'block';
+    const startButton = document.getElementById("start-button");
+    const resetButton = document.getElementById("reset-button");
+    const sequenceCounter = document.getElementById("sequence-counter");
+    startButton.style.display = "none";
+    resetButton.style.display = "block";
     gameSequence = [];
     userSequence = [];
     score = 0;
-    sequenceCounter.textContent = 'Sequence Length: 0';
+    sequenceCounter.textContent = "Sequence Length: 0";
     addRandomItemToSequence();
 }
 
 function resetGame() {
-    const startButton = document.getElementById('start-button');
-    const resetButton = document.getElementById('reset-button');
-    const currentItemBox = document.getElementById('current-item');
-    const sequenceCounter = document.getElementById('sequence-counter');
+    const startButton = document.getElementById("start-button");
+    const resetButton = document.getElementById("reset-button");
+    const currentItemBox = document.getElementById("current-item");
+    const sequenceCounter = document.getElementById("sequence-counter");
 
     gameSequence = [];
     userSequence = [];
     score = 0;
-    sequenceCounter.textContent = 'Sequence Length: 0';
-    currentItemBox.innerHTML = '';
-    startButton.style.display = 'block';
-    resetButton.style.display = 'none';
+    sequenceCounter.textContent = "Sequence Length: 0";
+    currentItemBox.innerHTML = " ";
+    startButton.style.display = "block";
+    resetButton.style.display = "none";
 }
 
 function addRandomItemToSequence() {
@@ -91,19 +92,23 @@ function addRandomItemToSequence() {
 }
 
 function displayItem(item) {
-    const currentItemBox = document.getElementById('current-item');
-    currentItemBox.innerHTML = `<img src="assets/images/${item}.png" alt="${item}">`;
+    const currentItemBox = document.getElementById("current-item");
+    currentItemBox.innerHTML = `
+        <img src="assets/images/${item}.png"
+            alt="${item}">`;
 }
 
 function updateCounter() {
-    const sequenceCounter = document.getElementById('sequence-counter');
+    const sequenceCounter = document.getElementById("sequence-counter");
     sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
 }
 
 function handleItemClick(item) {
     userSequence.push(item);
     if (!checkUserSequence()) {
-        alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
+        alert(`
+            Game Over! Your list contains
+                ${gameSequence.length - 1} items.`);
         updateHighScore();
         resetGame();
     } else if (userSequence.length === gameSequence.length) {
@@ -122,17 +127,17 @@ function checkUserSequence() {
 }
 
 function updateHighScore() {
-    const highScoreDisplay = document.getElementById('high-score');
+    const highScoreDisplay = document.getElementById("high-score");
 
     if (score > highScore) {
         highScore = score;
-        localStorage.setItem('highScore', highScore);
+        localStorage.setItem("highScore", highScore);
         highScoreDisplay.textContent = `High Score: ${highScore}`;
     }
 }
 
 function updateFooterYear() {
-    const yearSpan = document.getElementById('current-year');
+    const yearSpan = document.getElementById("current-year");
     const currentYear = new Date().getFullYear();
     yearSpan.textContent = currentYear;
 }

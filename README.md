@@ -2,7 +2,7 @@
 
 [View the live project here.](https://a-dan-a.github.io/shops-game/)
 
-This is an online memory game in which you have to remember an ever-growing list of items, trying to score as high as you can. It is designed predominently for children, to help their working memory.
+This is an online memory game in which you have to remember an ever-growing list of items, trying to score as high as you can. It is designed predominently for children, to help their working memory. This is a game that I have used with children before to help their working memory and has helped them to increase their recall over time, so I decided that a game of this would be useful.
 
 <h2 align="center"><img src="assets/readme-images/devices.png"></h2>
 
@@ -35,16 +35,16 @@ The main colors used are:
 
 | Color | Hex Code |
 | :---: | :---: |
-| white | #ffffff |
-| grey | #a7a7a7 |
-|dark red  | #be3144  | 
+|  | # |
+|  | # |
+|  | # | 
         
-with Black - #000000 text.
+with Black - #000000 and White #ffffff text.
 
 -   #### Typography
     -   The Arial font is used throughout the site, with Helvetica and sans-serif as back-ups in case there is an error. Arial is a highly accessible and clean font that makes the site easy to read.
  -  #### Imagery
-    -   
+    -   Bright colors are used to make the site seem fun and vibrant for all audiences, but primarily children. Simple images of fruit are used.
 
 *   ### Wireframes
 
