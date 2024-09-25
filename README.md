@@ -35,9 +35,9 @@ The main colors used are:
 
 | Color | Hex Code |
 | :---: | :---: |
-|  | # |
-|  | # |
-|  | # | 
+| purple | #ea00ff |
+| yellow | #fffb00 |
+| green | #15ff00 | 
         
 with Black - #000000 and White #ffffff text.
 
