@@ -89,11 +89,14 @@ header h2 {
 }
 
 #error {
-    background-color: brown;
+    background-color: #ea00ff;
     padding:10px;
     height:fit-content;
     width:100%;
     text-align: center;
+    font-size: larger;
+    border-color: #333;
+    border-style: solid; 
 }
 
 #start-button {
@@ -110,7 +113,7 @@ header h2 {
 footer {
     padding:10px;
     text-align:right;
-    font-size:15px;
+    font-size:20px;
     font-weight: bolder;
     background-color:#ea00ff;
     color: #000000;
