@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const highScoreDisplay = document.getElementById("high-score");
     const modal = document.getElementById("instruction-modal");
     const closeButton = document.querySelector(".close-button");
+    const clickedSequenceBox = document.getElementById("clicked-sequence");
 
     highScoreDisplay.textContent = `High Score: ${highScore}`;
 
@@ -35,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
         img.src = `assets/images/${item}.png`;
         img.alt = item;
         img.id = item;
-        img.addEventListener("click", () => handleItemClick(item));
+       
+        img.addEventListener('click', () => handleItemClick(item, img));
         itemGrid.appendChild(img);
     });
 
@@ -69,10 +71,13 @@ function startGame() {
     score = 0;
     sequenceCounter.textContent = "Sequence Length: 0";
     addRandomItemToSequence();
+
+    const clickedSequenceBox = document.getElementById("clicked-sequence");
+    clickedSequenceBox.innerHTML = '';
 }
 
 function resetGame() {
-    gamestarted = false;
+    gameStarted = false;
     const startButton = document.getElementById("start-button");
     const resetButton = document.getElementById("reset-button");
     const currentItemBox = document.getElementById("current-item");
@@ -85,6 +90,9 @@ function resetGame() {
     currentItemBox.innerHTML = " ";
     startButton.style.display = "block";
     resetButton.style.display = "none";
+
+    const clickedSequenceBox = document.getElementById("clicked-sequence");
+    clickedSequenceBox.innerHTML = '';
 }
 
 function addRandomItemToSequence() {
@@ -109,7 +117,14 @@ function updateCounter() {
 
 function handleItemClick(item) {
     if (!gameStarted) return;
+
+    const clickedSequenceBox = document.getElementById("clicked-sequence");
     
+    const img = document.createElement('img');
+    img.src = `assets/images/${item}.png`;
+    img.alt = item;
+    clickedSequenceBox.appendChild(img);
+
     userSequence.push(item);
     if (!checkUserSequence()) {
         alert(`
@@ -118,8 +133,11 @@ function handleItemClick(item) {
         updateHighScore();
         resetGame();
     } else if (userSequence.length === gameSequence.length) {
+        setTimeout(() => {
+        clickedSequenceBox.innerHTML =''
         score++;
         setTimeout(addRandomItemToSequence, 1000);
+    }, 500);
     }
 }
 
