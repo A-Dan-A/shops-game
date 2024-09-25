@@ -12,8 +12,9 @@ body {
 header {
     padding:10px;
     text-align:center;
+    font-weight: bolder;
     background-color:#ea00ff;
-    color: #fff;
+    color: #000000;
     position:sticky;
     top:0;
     width:100%;
@@ -67,7 +68,7 @@ header {
     height:fit-content;
     width:100%;
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
     margin: 5px;
     border-color: #333;
     border-style: solid;   
@@ -105,9 +106,9 @@ footer {
     padding:10px;
     text-align:right;
     font-size:15px;
-    font-weight: bold;
+    font-weight: bolder;
     background-color:#ea00ff;
-    color: #fff;
+    color: #000000;
     position:sticky;
     bottom:0;
     width:100%;
