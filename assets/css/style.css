@@ -123,9 +123,9 @@ footer {
 }
 
 .close-button {
-    color: #aaa;
+    color: #ff0000;
     float:right;
-    font-size:28px;
+    font-size:40px;
     font-weight:bold;
     cursor: pointer;
 }
