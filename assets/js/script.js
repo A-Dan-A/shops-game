@@ -1,6 +1,8 @@
 /*jshint esversion: 6 */
 /*jslint es6 */
 
+let gameStarted = false;
+
 const items = [
     "apple",
     "banana",
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function startGame() {
+    gameStarted = true;
     const startButton = document.getElementById("start-button");
     const resetButton = document.getElementById("reset-button");
     const sequenceCounter = document.getElementById("sequence-counter");
@@ -69,6 +72,7 @@ function startGame() {
 }
 
 function resetGame() {
+    gamestarted = false;
     const startButton = document.getElementById("start-button");
     const resetButton = document.getElementById("reset-button");
     const currentItemBox = document.getElementById("current-item");
@@ -104,6 +108,8 @@ function updateCounter() {
 }
 
 function handleItemClick(item) {
+    if (!gameStarted) return;
+    
     userSequence.push(item);
     if (!checkUserSequence()) {
         alert(`

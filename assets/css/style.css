@@ -121,7 +121,7 @@ header h2 {
 footer {
     padding:10px;
     text-align:right;
-    font-size:20px;
+    font-size: 22px;
     font-weight: bolder;
     background-color:#ea00ff;
     color: #000000;
@@ -173,6 +173,7 @@ footer {
 
 a:visited {
     color: rgb(255, 255, 255);
+    background-color: #000000;
   }
 
 /* Media Queries */
@@ -208,36 +209,6 @@ a:visited {
         height: 80px;
     }
 
-}
-
-/* Medium devices 
-@media (min-width: 700px) and (max-width: 900px) {
-    #game-container {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 15px;
-        width: 90%;
-    }
-
-    #item-grid {
-        grid-template-columns: repeat(3,80px);
-        gap: 10px;
-    }
-
-    #item-grid img {
-        width:80px;
-        height: 80px;
-    }
-
-    #side-box {
-        margin-left: 10px;
-        padding: 10px;
-    }
-
-    #current-item img {
-        width: 80px;
-        height: 80px;
-    }
 }
 
 /* Large devices */
