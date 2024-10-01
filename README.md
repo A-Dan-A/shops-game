@@ -48,11 +48,11 @@ with Black - #000000 and White #ffffff text.
 
 *   ### Wireframes
 
-    -   #### Desktop wireframes
+    -   #### Desktop and tablet wireframes
 
-        <img src="assets/readme-images/" width="300">
+        <img src="assets/readme-images/assets/project-2-wireframe-desktop-and-tablet-welcome-page.png" width="300">
 
-        <img src="assets/readme-images/" width="300">
+        <img src="assets/readme-images/assets/project-2-wireframe-desktop-and-tablet.png" width="300">
         
         <img src="assets/readme-images/" width="300">
 
@@ -60,21 +60,12 @@ with Black - #000000 and White #ffffff text.
 
     -   #### Mobile Wireframe 
 
-        <img src="assets/readme-images/" width="300">
+        <img src="assets/readme-images//workspace/project-2-wireframe-mobile-welcome-page.png" width="300">
+
+        <img src="assets/readme-images/project-2-wireframe-mobile.png" width="300">
 
         <img src="assets/readme-images/" width="300">
 
-        <img src="assets/readme-images/" width="300">
-
-
-
-    -   #### Tablet Wireframe
-
-        <img src="assets/readme-images/" width="300">
-
-        <img src="assets/readme-images/" width="300">
-
-        <img src="assets/readme-images/" width="300">
 
 ## Features
 
