@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const highScoreDisplay = document.getElementById("high-score");
     const modal = document.getElementById("instruction-modal");
     const closeButton = document.querySelector(".close-button");
-    const clickedSequenceBox = document.getElementById("clicked-sequence");
 
     highScoreDisplay.textContent = `High Score: ${highScore}`;
 
@@ -36,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
         img.src = `assets/images/${item}.png`;
         img.alt = item;
         img.id = item;
-       
-        img.addEventListener('click', () => handleItemClick(item, img));
+
+        img.addEventListener("click", () => handleItemClick(item, img));
         itemGrid.appendChild(img);
     });
 
@@ -73,7 +72,7 @@ function startGame() {
     addRandomItemToSequence();
 
     const clickedSequenceBox = document.getElementById("clicked-sequence");
-    clickedSequenceBox.innerHTML = '';
+    clickedSequenceBox.innerHTML = " ";
 }
 
 function resetGame() {
@@ -92,7 +91,7 @@ function resetGame() {
     resetButton.style.display = "none";
 
     const clickedSequenceBox = document.getElementById("clicked-sequence");
-    clickedSequenceBox.innerHTML = '';
+    clickedSequenceBox.innerHTML = " ";
 }
 
 function addRandomItemToSequence() {
@@ -116,11 +115,12 @@ function updateCounter() {
 }
 
 function handleItemClick(item) {
-    if (!gameStarted) return;
-
+    if (!gameStarted) {
+        return;
+    }
     const clickedSequenceBox = document.getElementById("clicked-sequence");
-    
-    const img = document.createElement('img');
+
+    const img = document.createElement("img");
     img.src = `assets/images/${item}.png`;
     img.alt = item;
     clickedSequenceBox.appendChild(img);
@@ -134,7 +134,7 @@ function handleItemClick(item) {
         resetGame();
     } else if (userSequence.length === gameSequence.length) {
         setTimeout(() => {
-        clickedSequenceBox.innerHTML =''
+        clickedSequenceBox.innerHTML ="";
         score++;
         setTimeout(addRandomItemToSequence, 1000);
     }, 500);
