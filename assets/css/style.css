@@ -163,6 +163,14 @@ footer {
     border-top: 4px solid black;
 }
 
+.github {
+    background-color: #fefefe;
+    display: inline;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 25px;
+}
+
 .modal {
     display: none;
     position: fixed;
