@@ -125,6 +125,9 @@ with Black - #000000 and White #ffffff text.
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
+
+rather than do automated testing (behaviour driven route instead) identified it as a possible stratagey but explained why not used, for example this is a small project with a small development window
+
 <img src="assets/readme-images/" width="500">
 <img src="assets/readme-images/" width="500">
 <img src="assets/readme-images/" width="500">
