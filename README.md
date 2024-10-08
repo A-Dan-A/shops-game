@@ -4,7 +4,7 @@
 
 This is an online memory game in which you have to remember an ever-growing list of items, trying to score as high as you can. It is designed predominently for children, to help their working memory. This is a game that I have used with children before to help their working memory and has helped them to increase their recall over time, so I decided that a game of this would be useful.
 
-<h2 align="center"><img src="assets/readme-images/shops-game-responsive.png.png"></h2>
+<h2 align="center"><img src="assets/readme-images/shops-game-responsive.png"></h2>
 
 
 ## User Experience (UX)
@@ -21,11 +21,10 @@ This is an online memory game in which you have to remember an ever-growing list
 
         1. As a Returning Visitor, to be reminded of the rules.
         2. As a Returning Visitor, I want the game to be different every time.
-        3. As a Returning Visitor, I want an incentive to play again.
 
     -   #### Frequent User Goals
         1. As a Frequent User, I want the game to remember my best score.
-        2. As a Frequent User, I want the game to be balanced enough for me to keep improving.
+        2. As a Frequent User, I want an incentive to play again.
         3. As a Frequent User, I want to see a measurable increase in my performance.
 
 -   ### Design
@@ -50,21 +49,16 @@ with Black - #000000 and White #ffffff text.
 
     -   #### Desktop and tablet wireframes
 
-        <img src="assets/readme-images/assets/project-2-wireframe-desktop-and-tablet-welcome-page.png" width="300">
+        <img src="assets/readme-images/project-2-wireframe-desktop-and-tablet-welcome-page.png" width="300">
 
-        <img src="assets/readme-images/assets/project-2-wireframe-desktop-and-tablet.png" width="300">
-        
-        <img src="assets/readme-images/" width="300">
-
- 
+        <img src="assets/readme-images/project-2-wireframe-desktop-and-tablet.png" width="300">
+         
 
     -   #### Mobile Wireframe 
 
-        <img src="assets/readme-images//workspace/project-2-wireframe-mobile-welcome-page.png" width="300">
+        <img src="assets/readme-images/project-2-wireframe-mobile-welcome-page.png" width="300">
 
         <img src="assets/readme-images/project-2-wireframe-mobile.png" width="300">
-
-        <img src="assets/readme-images/" width="300">
 
 
 ## Features
@@ -73,32 +67,26 @@ with Black - #000000 and White #ffffff text.
 
 <img src="assets/readme-images/shops-game-responsive.png" width="500">
 
--   
--   
+-   Has a modal that gives you the instructions and can be dismissed.
 
 <img src="assets/readme-images/modal-shops-game.png" width="500">
 
--   
--   
+-   Has a Basket section where the fruits appear as you click the right ones.
+-   Has a sequence counter that goes up when a fruit is added to the sequence 
+    each time you complete one sucessfully.
+-   Has a high score display that shows your highest score, which is saved to local memory.
 
 <img src="assets/readme-images/basket-shops-game.png" width="500">
 
--   
+-   Has a game over pop-up that tells you what your score was
+-   Has a date in the footer that automatically updates.
 
 <img src="assets/readme-images/game-over-shops-game.png" width="500">
 
--   
+-   Has a 404 page with a button that redirects you back to the main page.
 
 <img src="assets/readme-images/404shops-game.png" width="500">
 
--   
-
-<img src="assets/readme-images/" width="500">
-
--   
--   
-
-<img src="assets/readme-images/" width="500">
 
 ## Technologies Used
 
@@ -130,13 +118,10 @@ rather than do automated testing (behaviour driven route instead) identified it 
 
 <img src="assets/readme-images/shops-game-html-checker.png" width="500">
 <img src="assets/readme-images/shops-game-404-html-checker.png" width="500">
-<img src="assets/readme-images/shops-game-css-validator.png" width="500">
-<img src="assets/readme-images/" width="500">
 
 _____
 
-<img src="assets/readme-images/" width="500">
-<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/shops-game-css-validator.png" width="500">
 
 
 ### Testing User Stories from User Experience (UX) Section
@@ -213,20 +198,19 @@ _____
 ### Further Testing
 
 -   The website was tested on Google Chrome and Microsoft Edge browsers.
--   The website was viewed on a laptop and a smartphone as well as by using chrome developer tools to test different screen sizes.
+-   The website was viewed on a laptop and a smartphone as well as by using chrome developer tools to test      
+    different screen sizes.
 -   Testing was done to make sure all of the pages linked to each other and to any external links properly.
 
 -   Testing was done with Google's Lighthouse devtool. 
 <img src="assets/readme-images/lighthouse-desktop.png" width="500">
 <img src="assets/readme-images/lighthouse-mobile.png" width="500">
-<img src="assets/readme-images/" width="500">
-<img src="assets/readme-images/" width="500">
+<img src="assets/readme-images/lighthouse-404-desktop.png" width="500">
+<img src="assets/readme-images/lighthouse-404-mobile.png" width="500">
 
 -   Testing was done with the Webaim WAVE tool to test accessibility
 <img src="assets/readme-images/shops-game-wave.png" width="500">
 <img src="assets/readme-images/shops-game-wave-404.png" width="500">
-<img src="assets/readme-images/" width="500">
-<img src="assets/readme-images/" width="500">
 
 ### Known Bugs
 
