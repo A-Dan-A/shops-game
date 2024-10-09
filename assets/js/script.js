@@ -28,8 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("instruction-modal");
     const closeButton = document.querySelector(".close-button");
 
+    if (highScoreDisplay) {
     highScoreDisplay.textContent = `High Score: ${highScore}`;
-
+    }
+    
     items.forEach( function (item) {
         const img = document.createElement("img");
         img.src = `assets/images/${item}.png`;
