@@ -203,6 +203,7 @@ _____
 -   Testing was done to make sure all of the pages linked to each other and to any external links properly.
 
 -   Testing was done with Google's Lighthouse devtool. 
+
 <img src="assets/readme-images/lighthouse-desktop.png" width="500">
 <img src="assets/readme-images/lighthouse-mobile.png" width="500">
 <img src="assets/readme-images/lighthouse-404-desktop.png" width="500">
