@@ -214,29 +214,42 @@ _____
 <img src="assets/readme-images/shops-game-wave-404.png" width="500">
 
 ### Known Bugs
+  
+``` 
+`img src="images/${item}.png" alt="${item}">`  
+```
+-   solved by adding < to start of tag
+```
+<`img src="images/${item}.png" alt="${item}">`
+```
 
--   `img src="images/${item}.png" alt="${item}">` solved by adding < to start of tag
+```
+const randomItem = items[Math.floor(Math.random() * items,length)];
+```
+-   solved by changing a , to a .
+```
+const randomItem = items[Math.floor(Math.random() * items.length)];
+```
 
--       function addRandomItemToSequence() {
-        const randomItem = items[Math.floor(Math.random() * items,length)];
-        gameSequence.push(randomItem);
-        displayItem(randomItem);
-        updateCounter();
-        userSequence = [];
-
-solved by changing a , to a .
-
--   function updateCounter() {
+```
+function updateCounter( {
+sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
+})
+```
+-   Solved by moving the ) next to updateCounter
+```
+function updateCounter() {
         sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
     }
+```
 
-was function updateCounter( {
-        sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
-    })
-
--   let usersequence = [];
-
-should have been let userSequence = [];
+```
+let usersequence = [];
+```
+-   Solved by adding the capital for Sequence
+```
+let userSequence = [];
+```
 
 -      function checkUserSequence() {
         for (let i = 0; i < userSequence.length; i++) {
