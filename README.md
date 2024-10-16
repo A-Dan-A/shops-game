@@ -128,43 +128,48 @@ _____
 
 -   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, 
+    1. As a First Time Visitor, I want the purpose of the site to be obvious.
 
-        1. 
-        2. 
-        3. 
-    <img src="assets/readme-images/" width="500">
-    <img src="assets/readme-images/" width="500">
+        1. The game is quite a well known one, so the title being prominent will ensure anyone who knows the game
+        will have an idea of what to expect from the site.
+        2. The subtitle is 'A Memory Game' which tells a first time visitor with no prior knowledge of the game
+        what the purpose of the site is.
+        3. An instruction modal starts on the screen, explaining how the game works.
+    <img src="assets/readme-images/modal-shops-game.png" width="500">
+    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
     2. As a First Time Visitor, I want the navigation to be obvious and easy.
 
-        1. 
-        2. 
-        3. 
-    <img src="assets/readme-images/" width="500">
+        1. An instruction modal starts on the screen, explaining how to play the game, so a first time user knows what to do.
+        2. The button to dismiss the modal is a red cross, designed to stand out and be similar to how other things are dismissed in games and on the internet.
+        3. The only buttons are start game and play again, making it clear how to do start and restart the game.
+        4. An instruction remains on the screen informing the user that they need to 'click the fruits in sequence to add them to your basket.' This informs the user of where to click during the game.
+    <img src="assets/readme-images/modal-shops-game.png" width="500">
+    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
-    3. 
+    3. As a First Time Visitor, I want to know how to play the game.
         1. 
         2. 
         3. 
-    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/modal-shops-game.png" width="500">
+    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
 -   #### Returning Visitor Goals
 
-    1. As a Returning Visitor, 
+    1. As a Returning Visitor, to be reminded of the rules. 
 
         1. 
         2. 
-    <img src="assets/readme-images/" width="500">
-    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/modal-shops-game.png" width="500">
+    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
-    2. As a Returning Visitor, 
+    2. As a Returning Visitor, I want the game to be different every time.
 
         1. 
         2. 
         3. 
-    <img src="assets/readme-images/" width="500">
-    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/game-over-shops-game.png" width="500">
+    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
     3. As a Returning Visitor, 
         1. 
@@ -173,26 +178,23 @@ _____
 
 -   #### Frequent User Goals
 
-    1. As a Frequent User, 
+    1. As a Frequent User, I want the game to remember my best score. 
 
-        1. 
+        1. There is a high score box that uses local storage to remember a user's best score.
         2. 
         3. 
-    <img src="assets/readme-images/" width="500">
-    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
-    2. As a Frequent User, 
+    2. As a Frequent User, I want an incentive to play again. 
 
+        1. In the modal, there is a notification saying that new lists are coming soon, to encourage frequent users to return.
+        2. 
+    <img src="assets/readme-images/modal-shops-game.png" width="500">
+
+    3. As a Frequent User, I want to see a measurable increase in my performance.
         1. 
         2. 
-    <img src="assets/readme-images/" width="500">
-    <img src="assets/readme-images/" width="500">
-
-    3. As a Frequent User, 
-        1. 
-        2. 
-    <img src="assets/readme-images/" width="500">
-    <img src="assets/readme-images/" width="500">
+    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
 
 ### Further Testing
@@ -212,6 +214,26 @@ _____
 -   Testing was done with the Webaim WAVE tool to test accessibility
 <img src="assets/readme-images/shops-game-wave.png" width="500">
 <img src="assets/readme-images/shops-game-wave-404.png" width="500">
+
+### Manual and Automated Testing
+
+Automated testing would have involved writing tests before the project to ensure continuous development by using pre-written tests to ensure the software worked and fulfilled requirements. This can be essential in larger projects because it means that the testing is done by the tool/script, which can do testing faster and more efficiently. The script would be a set of instructions to be performed to validate a feature or expected outcome. This is more narrow in what it tests as you are telling it exactly what to look for and involves coding the test and maintenance to ensure it continues working as needed. I decided that as it was a small project with relatively limited functionality compared to a larger game or website, this would not be best suited to automated development.
+
+Manual testing involves testing components of your game versus expected functionality. You are testing against expected outcomes just as automated testing does, but doing it manually allows for handling more complex scenarios as you can adjust as you go along, whereas automated testing is more rigid. As this was a small project I decided this would be the most suitable method. The testing is also focussed mostly on inputs that will be used by the user, so testing them as if I was the user is a more focussed way to make sure it works not just from a code standpoint, but a gameplay one. I wrote a list of expected functions of the game and site, then tested those to ensure they functioned as expected and therefore met the needs of the user.
+
+-   Homepage loading as expected
+-   Start button begins the game
+-   Start button is hidden after being pressed
+-   Play again/reset button appears when Start Button is hidden
+-   Play again Button is hidden when pressed and the start button is visible
+-   When the start button is pressed, the current item box appears and has an item in it.
+-   When the correct item is pressed it appears in the basket
+-   When the sequence is completed successfully, the items disappear from the basket after a short pause 
+-   When the sequence is completed successfully the sequence counter goes up by one
+-   When the sequence is completed successfully a new item appears in the current item box
+-   When an incorrect item is clicked, the game over pop-up appears with your final score
+-   Before the game has started, clicking the items does nothing.
+-   When the game is over, the high score will be updated if it was beaten.
 
 ### Known Bugs
   
@@ -251,38 +273,50 @@ let usersequence = [];
 let userSequence = [];
 ```
 
--      function checkUserSequence() {
-        for (let i = 0; i < userSequence.length; i++) {
-            if (userSequence[i] !== gameSequence) {
-                return false;
-            }
+```
+function checkUserSequence() {
+    for (let i = 0; i < userSequence.length; i++) {
+        if (userSequence[i] !== gameSequence) {
+        return false;
         }
-        return true;
     }
+    return true;
+}
+```
 
-changed to     function checkUserSequence() {
-        for (let i = 0; i < userSequence.length; i++) {
-            if (userSequence[i] !== gameSequence[i]) {
-                return false;
-            }
+-   Solved by adding [i] after gameSequence
+```
+function checkUserSequence() {
+    for (let i = 0; i < userSequence.length; i++) {
+        if (userSequence[i] !== gameSequence[i]) {
+        return false;
         }
-        return true;
     }
-
--   
-fix high score (added high score section)
-
-    function handleItemClick(item) {
-        userSequence.push(item);
-        if (!checkUserSequence()) {
-            alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
-            updateHighScore();
-            resetGame();
-        } else if (userSequence.length === gameSequence.length) {score++;
-            setTimeout(addRandomItemToSequence, 1000);
-        }
+    return true;
+}
+```
+-   fixed high score (added high score section)
+```
+function handleItemClick(item) {
+    userSequence.push(item);
+    if (!checkUserSequence()) {
+        alert(`Game Over! Your list contains ${gameSequence.length - 1} items.`);
+        updateHighScore();
+        resetGame();
+    } else if (userSequence.length === gameSequence.length) {score++;
+        setTimeout(addRandomItemToSequence, 1000);
+    }
+}
+```
 
 -   testing - to get images of fruit to load, had to add assets/ before the images/fruit.png code
+
+-   Added 'if' statement to stop an error appearing in the console because of 'null' being returned.
+```
+	if (highScoreDisplay) {
+		highScoreDisplay.textContent = `High Score: ${highScore}`;
+	}
+```
 
 ## Deployment
 
