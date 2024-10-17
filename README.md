@@ -60,6 +60,11 @@ with Black - #000000 and White #ffffff text.
 
         <img src="assets/readme-images/project-2-wireframe-mobile.png" width="300">
 
+    -   #### Original Wireframe
+
+        <img src="assets/readme-images/project-2-wireframe-original.png" width="300">
+
+        This was the original hand drawn wireframe. It has a slightly different layout, but is otherwise the same as the finished project. The one main difference between this and the digital wireframes is that the 'basket' feature was cut due to time constraints, but was later added back in due to it being the best way to give the user feedback when they clicked an item.
 
 ## Features
 
@@ -112,9 +117,6 @@ with Black - #000000 and White #ffffff text.
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
-
-rather than do automated testing (behaviour driven route instead) identified it as a possible stratagey but explained why not used, for example this is a small project with a small development window
 
 <img src="assets/readme-images/shops-game-html-checker.png" width="500">
 <img src="assets/readme-images/shops-game-404-html-checker.png" width="500">
@@ -200,47 +202,50 @@ _____
 ### Further Testing
 
 -   The website was tested on Google Chrome and Microsoft Edge browsers.
+
 -   The website was viewed on a laptop and a smartphone as well as by using chrome developer tools to test      
     different screen sizes.
+
 -   Testing was done to make sure all of the pages linked to each other and to any external links properly.
 
 -   Testing was done with Google's Lighthouse devtool. 
 
-<img src="assets/readme-images/lighthouse-desktop.png" width="500">
-<img src="assets/readme-images/lighthouse-mobile.png" width="500">
-<img src="assets/readme-images/lighthouse-404-desktop.png" width="500">
-<img src="assets/readme-images/lighthouse-404-mobile.png" width="500">
+<img src="assets/readme-images/lighthouse-desktop.png" width="300">
+<img src="assets/readme-images/lighthouse-mobile.png" width="300">
+<img src="assets/readme-images/lighthouse-404-desktop.png" width="300">
+<img src="assets/readme-images/lighthouse-404-mobile.png" width="300">
 
 -   Testing was done with the Webaim WAVE tool to test accessibility
-<img src="assets/readme-images/shops-game-wave.png" width="500">
-<img src="assets/readme-images/shops-game-wave-404.png" width="500">
+
+<img src="assets/readme-images/shops-game-wave.png" width="300">
+<img src="assets/readme-images/shops-game-wave-404.png" width="300">
 
 ### Manual and Automated Testing
 
 Automated testing would have involved writing tests before the project to ensure continuous development by using pre-written tests to ensure the software worked and fulfilled requirements. This can be essential in larger projects because it means that the testing is done by the tool/script, which can do testing faster and more efficiently. The script would be a set of instructions to be performed to validate a feature or expected outcome. This is more narrow in what it tests as you are telling it exactly what to look for and involves coding the test and maintenance to ensure it continues working as needed. I decided that as it was a small project with relatively limited functionality compared to a larger game or website, this would not be best suited to automated development.
 
-Manual testing involves testing components of your game versus expected functionality. You are testing against expected outcomes just as automated testing does, but doing it manually allows for handling more complex scenarios as you can adjust as you go along, whereas automated testing is more rigid. As this was a small project I decided this would be the most suitable method. The testing is also focussed mostly on inputs that will be used by the user, so testing them as if I was the user is a more focussed way to make sure it works not just from a code standpoint, but a gameplay one. I wrote a list of expected functions of the game and site, then tested those to ensure they functioned as expected and therefore met the needs of the user.
+Manual testing involves testing components of your game versus expected functionality. You are testing against expected outcomes just as automated testing does, but doing it manually allows for handling more complex scenarios as you can adjust as you go along, whereas automated testing is more rigid. As this was a small project I decided this would be the most suitable method. The testing is also focussed mostly on inputs that will be used by the user, so testing them as if I was the user is a more focussed way to make sure it works not just from a code standpoint, but a gameplay one. I wrote a list of expected functions of the game and site, then tested those to ensure they functioned as expected and therefore was behaviour driven to meet the needs of the user.
 
--   Homepage loading as expected
--   Start button begins the game
--   Start button is hidden after being pressed
--   Play again/reset button appears when Start Button is hidden
--   Play again Button is hidden when pressed and the start button is visible
--   When the start button is pressed, the current item box appears and has an item in it.
--   When the correct item is pressed it appears in the basket
--   When the sequence is completed successfully, the items disappear from the basket after a short pause 
--   When the sequence is completed successfully the sequence counter goes up by one
--   When the sequence is completed successfully a new item appears in the current item box
--   When an incorrect item is clicked, the game over pop-up appears with your final score
--   Before the game has started, clicking the items does nothing.
--   When the game is over, the high score will be updated if it was beaten.
+-   Homepage loading as expected. &check;
+-   Start button begins the game. &check;
+-   Start button is hidden after being pressed. &check;
+-   Play again/reset button appears when Start Button is hidden. &check;
+-   Play again Button is hidden when pressed and the start button is visible. &check;
+-   When the start button is pressed, the current item box appears and has an item in it. &check;
+-   When the correct item is pressed it appears in the basket. &check;
+-   When the sequence is completed successfully, the items disappear from the basket after a short pause. &check;
+-   When the sequence is completed successfully the sequence counter goes up by one. &check;
+-   When the sequence is completed successfully a new item appears in the current item box. &check;
+-   When an incorrect item is clicked, the game over pop-up appears with your final score. &check;
+-   Before the game has started, clicking the items does nothing. &check;
+-   When the game is over, the high score will be updated if it was beaten. &check;
 
 ### Known Bugs
   
 ``` 
 `img src="images/${item}.png" alt="${item}">`  
 ```
--   solved by adding < to start of tag
+-   Tag not properly closed. Solved by adding < to start of tag
 ```
 <`img src="images/${item}.png" alt="${item}">`
 ```
@@ -248,7 +253,7 @@ Manual testing involves testing components of your game versus expected function
 ```
 const randomItem = items[Math.floor(Math.random() * items,length)];
 ```
--   solved by changing a , to a .
+-   Incorrect symbol used. Solved by changing a , to a .
 ```
 const randomItem = items[Math.floor(Math.random() * items.length)];
 ```
@@ -258,7 +263,7 @@ function updateCounter( {
 sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
 })
 ```
--   Solved by moving the ) next to updateCounter
+-   Closing bracket in the wrong place. Solved by moving the ) next to updateCounter
 ```
 function updateCounter() {
         sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
@@ -268,7 +273,7 @@ function updateCounter() {
 ```
 let usersequence = [];
 ```
--   Solved by adding the capital for Sequence
+-   Uppercase not used properly in declaration. Solved by adding the capital for Sequence
 ```
 let userSequence = [];
 ```
@@ -284,7 +289,7 @@ function checkUserSequence() {
 }
 ```
 
--   Solved by adding [i] after gameSequence
+-   Index symbol missing. Solved by adding [i] after gameSequence.
 ```
 function checkUserSequence() {
     for (let i = 0; i < userSequence.length; i++) {
@@ -295,7 +300,7 @@ function checkUserSequence() {
     return true;
 }
 ```
--   fixed high score (added high score section)
+-   High score function not called within if statement. Added updateHighScore(); in correct place.
 ```
 function handleItemClick(item) {
     userSequence.push(item);
@@ -309,7 +314,7 @@ function handleItemClick(item) {
 }
 ```
 
--   testing - to get images of fruit to load, had to add assets/ before the images/fruit.png code
+-   Images not loading - to get images of fruit to load, had to add assets/ before the images/fruit.png code.
 
 -   Added 'if' statement to stop an error appearing in the console because of 'null' being returned.
 ```
@@ -350,14 +355,6 @@ By forking the GitHub Repository a copy of the original repository is made, so w
 
 ## Credits
 
-### Code
-
--   
-
--   
-
--   
-
 ### Content
 
 -   All the content was written by the developer.
@@ -368,26 +365,24 @@ By forking the GitHub Repository a copy of the original repository is made, so w
 
 -   Fruit images were all from WikiMedia Commons
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Orange%2C_orange_peel.jpg/640px-Orange%2C_orange_peel.jpg
+[Orange](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Orange%2C_orange_peel.jpg/640px-Orange%2C_orange_peel.jpg)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lemon03.jpg/640px-Lemon03.jpg
+[Lemon](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lemon03.jpg/640px-Lemon03.jpg)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pineapple_on_white_table.jpg/640px-Pineapple_on_white_table.jpg
+[Pineapple](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pineapple_on_white_table.jpg/640px-Pineapple_on_white_table.jpg)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/D%27anjou_pear.jpg/640px-D%27anjou_pear.jpg
+[Pear](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/D%27anjou_pear.jpg/640px-D%27anjou_pear.jpg)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Coconuts_-_single_and_cracked_open.jpg/640px-Coconuts_-_single_and_cracked_open.jpg
+[Coconut](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Coconuts_-_single_and_cracked_open.jpg/640px-Coconuts_-_single_and_cracked_open.jpg)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Strawberry-331280433961ZpzL.png/640px-Strawberry-331280433961ZpzL.png
+[Strawberry](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Strawberry-331280433961ZpzL.png/640px-Strawberry-331280433961ZpzL.png)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Banana.png/640px-Banana.png
+[Banana](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Banana.png/640px-Banana.png)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Red_Apple_edit.png/640px-Red_Apple_edit.png
+[Apple](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Red_Apple_edit.png/640px-Red_Apple_edit.png)
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Grapes_bunch_green.png/640px-Grapes_bunch_green.png
-
-
--   
+[Grapes](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Grapes_bunch_green.png/640px-Grapes_bunch_green.png)
+ 
 
 ### Acknowledgements
 
