@@ -62,9 +62,10 @@ with Black - #000000 and White #ffffff text.
 
     -   #### Original Wireframe
 
-        <img src="assets/readme-images/project-2-wireframe-original.png" width="300">
+        <img src="assets/readme-images/early-wireframe-welcome.png" width="300">
+        <img src="assets/readme-images/early-wireframe-game.png" width="300">
 
-        This was the original hand drawn wireframe. It has a slightly different layout, but is otherwise the same as the finished project. The one main difference between this and the digital wireframes is that the 'basket' feature was cut due to time constraints, but was later added back in due to it being the best way to give the user feedback when they clicked an item.
+        These are the original hand drawn wireframes. There is a slightly different layout, but is otherwise the same as the finished project. The one main difference between this and the digital wireframes is that the 'basket' feature was cut due to time constraints, but was later added back in due to it being the best way to give the user feedback when they clicked an item. It was decided that rather than the welcome page, a modal would be used to convey the instructions prior to starting the game.
 
 ## Features
 
@@ -113,6 +114,8 @@ with Black - #000000 and White #ffffff text.
     - GitHub has been used to store the project.
 1. [Paint:](https://www.microsoft.com/en-us/windows/paint)
     - Paint was used to create the [wireframes]() that were used in the design process.
+1. [Image Resizer:](https://imageresizer.com/)
+    - This was used to resize the images, following lighthouse testing, to optimize performance.
 
 ## Testing
 
@@ -214,6 +217,8 @@ _____
 <img src="assets/readme-images/lighthouse-mobile.png" width="300">
 <img src="assets/readme-images/lighthouse-404-desktop.png" width="300">
 <img src="assets/readme-images/lighthouse-404-mobile.png" width="300">
+
+-   Testing flagged 'displays images with incorrect aspect ratio' and that they were larger than was needed, causing the page to lad slower. The images were resized to be much smaller and the correct aspect ratio. This meant best practices went up to 100%, though the performance still does need a few more fixes in order to run better, mostly due to Bootstrap. This would be a future fix, as it doesn't noticeably affect the game.
 
 -   Testing was done with the Webaim WAVE tool to test accessibility
 
