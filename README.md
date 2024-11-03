@@ -128,6 +128,12 @@ _____
 
 <img src="assets/readme-images/shops-game-css-validator.png" width="500">
 
+_____
+
+Jshint was used to check the quality of the javascript.
+
+<img src="assets/readme-images/jshint.png" width="500">
+
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -179,7 +185,7 @@ _____
     3. As a Returning Visitor, 
         1. 
         2. 
-    <img src="assets/readme-images/" width="500">
+    
 
 -   #### Frequent User Goals
 
