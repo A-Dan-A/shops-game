@@ -1,7 +1,9 @@
 /* jshint esversion: 6 */
 
+/* Tracks if game has started */
 let gameStarted = false;
 
+/* List of items used in the game */
 const items = [
     "apple",
     "banana",
@@ -14,11 +16,15 @@ const items = [
     "lemon"
 ];
 
+/* arrays to store sequences */
 let gameSequence = [];
 let userSequence = [];
+
+/* Current score of player and high score from local storage */
 let score = 0;
 let highScore = localStorage.getItem("highScore") || 0;
 
+/* Dom Ready Function and elements */
 document.addEventListener("DOMContentLoaded", function() {
     const itemGrid = document.getElementById("item-grid");
     const startButton = document.getElementById("start-button");
@@ -27,10 +33,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("instruction-modal");
     const closeButton = document.querySelector(".close-button");
 
+    /* Update high score display */
     if (highScoreDisplay) {
         highScoreDisplay.textContent = `High Score: ${highScore}`;
     }
-
+    
+    /* Populate grid with item images with event listeners */
     items.forEach(function(item) {
         const img = document.createElement("img");
         img.src = `assets/images/${item}.png`;
@@ -41,9 +49,11 @@ document.addEventListener("DOMContentLoaded", function() {
         itemGrid.appendChild(img);
     });
 
+    /* EVent listeners to start and reset the game */
     startButton.addEventListener("click", startGame);
     resetButton.addEventListener("click", resetGame);
 
+    /* Display and close modal with instructions */
     modal.style.display = "block";
 
     closeButton.addEventListener("click", function() {
@@ -56,9 +66,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    /* Update year in footer */
     updateFooterYear();
 });
 
+/* Start game function*/
 function startGame() {
     gameStarted = true;
     const startButton = document.getElementById("start-button");
@@ -76,6 +88,7 @@ function startGame() {
     clickedSequenceBox.innerHTML = " ";
 }
 
+/* Reset game function */
 function resetGame() {
     gameStarted = false;
     const startButton = document.getElementById("start-button");
@@ -95,6 +108,7 @@ function resetGame() {
     clickedSequenceBox.innerHTML = " ";
 }
 
+/* Add random item to sequence funtion */
 function addRandomItemToSequence() {
     const randomItem = items[Math.floor(Math.random() * items.length)];
     gameSequence.push(randomItem);
@@ -103,6 +117,7 @@ function addRandomItemToSequence() {
     userSequence = [];
 }
 
+/* Show current item in game */
 function displayItem(item) {
     const currentItemBox = document.getElementById("current-item");
     currentItemBox.innerHTML = `
@@ -110,11 +125,13 @@ function displayItem(item) {
             alt="${item}">`;
 }
 
+/* Update counter with current sequence length */
 function updateCounter() {
     const sequenceCounter = document.getElementById("sequence-counter");
     sequenceCounter.textContent = `Sequence Length: ${gameSequence.length}`;
 }
 
+/* Handle user click on item image */
 function handleItemClick(item) {
     if (!gameStarted) {
         return;
@@ -142,6 +159,7 @@ function handleItemClick(item) {
     }
 }
 
+/* CHeck if user sequence matches game sequence */
 function checkUserSequence() {
     for (let i = 0; i < userSequence.length; i++) {
         if (userSequence[i] !== gameSequence[i]) {
@@ -151,6 +169,7 @@ function checkUserSequence() {
     return true;
 }
 
+/* Update high score */
 function updateHighScore() {
     const highScoreDisplay = document.getElementById("high-score");
 
@@ -161,6 +180,7 @@ function updateHighScore() {
     }
 }
 
+/* Update footer year */
 function updateFooterYear() {
     const yearSpan = document.getElementById("current-year");
     const currentYear = new Date().getFullYear();
