@@ -25,7 +25,6 @@ This is an online memory game in which you have to remember an ever-growing list
     -   #### Frequent User Goals
         1. As a Frequent User, I want the game to remember my best score.
         2. As a Frequent User, I want an incentive to play again.
-        3. As a Frequent User, I want to see a measurable increase in my performance.
 
 -   ### Design
     -   #### Colour Scheme
@@ -139,73 +138,40 @@ Jshint was used to check the quality of the javascript.
 
 -   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want the purpose of the site to be obvious.
-
-        1. The game is quite a well known one, so the title being prominent will ensure anyone who knows the game
-        will have an idea of what to expect from the site.
-        2. The subtitle is 'A Memory Game' which tells a first time visitor with no prior knowledge of the game
-        what the purpose of the site is.
-        3. An instruction modal starts on the screen, explaining how the game works.
-    <img src="assets/readme-images/modal-shops-game.png" width="500">
-    <img src="assets/readme-images/basket-shops-game.png" width="500">
-
-    2. As a First Time Visitor, I want the navigation to be obvious and easy.
-
-        1. An instruction modal starts on the screen, explaining how to play the game, so a first time user knows what to do.
-        2. The button to dismiss the modal is a red cross, designed to stand out and be similar to how other things are dismissed in games and on the internet.
-        3. The only buttons are start game and play again, making it clear how to do start and restart the game.
-        4. An instruction remains on the screen informing the user that they need to 'click the fruits in sequence to add them to your basket.' This informs the user of where to click during the game.
-    <img src="assets/readme-images/modal-shops-game.png" width="500">
-    <img src="assets/readme-images/basket-shops-game.png" width="500">
-
-    3. As a First Time Visitor, I want to know how to play the game.
-        1. 
-        2. 
-        3. 
+    - As a First Time Visitor, I want the purpose of the site to be obvious.
+    - As a First Time Visitor, I want the navigation to be obvious and easy.
+    - As a First Time Visitor, I want to know how to play the game.
+        1. The game is quite a well known one, so the title being prominent will ensure anyone who knows the game will have an idea of what to expect from the site.
+        2. The subtitle is 'A Memory Game' which tells a first time visitor with no prior knowledge of the game what the purpose of the site is.      
+        3. An instruction modal starts on the screen, explaining how to play the game, so a first time user knows what to do.
+        4. The button to dismiss the modal is a red cross, designed to stand out and be similar to how other things are dismissed in games and on the internet.
+        5. The only buttons are start game and play again, making it clear how to do start and restart the game.
+        6. An instruction remains on the screen informing the user that they need to 'click the fruits in sequence to add them to your basket.' This informs the user of where to click during the game.
     <img src="assets/readme-images/modal-shops-game.png" width="500">
     <img src="assets/readme-images/basket-shops-game.png" width="500">
 
 -   #### Returning Visitor Goals
 
-    1. As a Returning Visitor, to be reminded of the rules. 
-
-        1. 
-        2. 
+    - As a Returning Visitor, to be reminded of the rules. 
+    - As a Returning Visitor, I want the game to be different every time.
+        1. An instruction modal starts on the screen, explaining how to play the game, so a first time user knows what to do.
+        2. The sequence is randomised, so the game will be different every time.
     <img src="assets/readme-images/modal-shops-game.png" width="500">
     <img src="assets/readme-images/basket-shops-game.png" width="500">
-
-    2. As a Returning Visitor, I want the game to be different every time.
-
-        1. 
-        2. 
-        3. 
     <img src="assets/readme-images/game-over-shops-game.png" width="500">
-    <img src="assets/readme-images/basket-shops-game.png" width="500">
 
-    3. As a Returning Visitor, 
-        1. 
-        2. 
-    
 
 -   #### Frequent User Goals
 
-    1. As a Frequent User, I want the game to remember my best score. 
-
+    - As a Frequent User, I want the game to remember my best score. 
         1. There is a high score box that uses local storage to remember a user's best score.
-        2. 
-        3. 
+
     <img src="assets/readme-images/basket-shops-game.png" width="500">
 
-    2. As a Frequent User, I want an incentive to play again. 
-
+    - As a Frequent User, I want an incentive to play again. 
         1. In the modal, there is a notification saying that new lists are coming soon, to encourage frequent users to return.
-        2. 
-    <img src="assets/readme-images/modal-shops-game.png" width="500">
 
-    3. As a Frequent User, I want to see a measurable increase in my performance.
-        1. 
-        2. 
-    <img src="assets/readme-images/basket-shops-game.png" width="500">
+    <img src="assets/readme-images/modal-shops-game.png" width="500">
 
 
 ### Further Testing
